@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div{
+    margin: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid ;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.wrong_msg {
+    color: red;
+}
+
+button {
+    width: 30%;
+    padding: 10px;
+    background-color: #4169E1;
+    border: none;
+    border-radius: 4px;
+    color: whitesmoke;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1c41b0;
+}
+
