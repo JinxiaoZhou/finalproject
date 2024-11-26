@@ -1,5 +1,6 @@
 <?php
-
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
 $host = "localhost";
 $dbname = "user_info";
@@ -27,8 +28,6 @@ if ($mysqli->query($sqlCreateDB) === false) {
     $sql = file_get_contents($sqlFile);
 
     $sqlStatements = explode(';', $sql);
-
-
     foreach ($sqlStatements as $statement) {
         $trimmedStatement = trim($statement);
         if (!empty($trimmedStatement)) {
@@ -38,8 +37,6 @@ if ($mysqli->query($sqlCreateDB) === false) {
         }
     }
 }
-
-
 
 $mysqli = new mysqli(
     hostname: $host,

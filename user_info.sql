@@ -1,4 +1,3 @@
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -12,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `food_list` (
   `protein` decimal(11,0) NOT NULL,
   `gram` decimal(11,0) NOT NULL,
   `calories` decimal(11,0) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+);
 
 
 INSERT IGNORE INTO `food_list` (`id`, `name`, `fat`, `carbohydrate`, `protein`, `gram`, `calories`) VALUES
@@ -29,7 +28,7 @@ CREATE TABLE  IF NOT EXISTS `login_info` (
   `id` int(11) NOT NULL PRIMARY KEY,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+);
 
 
 INSERT IGNORE INTO `login_info` (`id`, `username`, `password`) VALUES
@@ -39,8 +38,8 @@ INSERT IGNORE INTO `login_info` (`id`, `username`, `password`) VALUES
 CREATE TABLE IF NOT EXISTS `today_list` (
   `id` int(11) NOT NULL PRIMARY KEY,
   `food_list_id` int(11) NOT NULL,
-  FOREIGN KEY (`food_list_id`) REFERENCES food_list(`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  FOREIGN KEY (`food_list_id`) REFERENCES `food_list`(`id`)
+);
 
 
 

@@ -10,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
         $mysqli = require __DIR__."/db.php";
 
         $sql = "INSERT INTO login_info (username, password)
-                VALUE (?,?)";
+                VALUES (?,?)";
 
         $stmt = $mysqli->stmt_init();
 

@@ -1,5 +1,4 @@
 <?php
-$mysqli = require __DIR__."/db.php";
 $login_fail =false;
 $login_msg="Wrong Username";
 
@@ -7,7 +6,6 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
 
     $mysqli = require __DIR__."/db.php";
     $sql = sprintf("SELECT * FROM login_info WHERE username ='%s'",
-
     $mysqli ->real_escape_string ($_POST["username"]));
     $result =$mysqli->query($sql);
     $user = $result->fetch_assoc();
